@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean name="engine" class="Practical4.Engine">
+		<property name="engineNo" value="1"></property>
+		<property name="engineName" value="2755 cc 2"></property>
+		<property name="engineType" value="2-GD FTV Engine"></property>
+	</bean>
+	
+	<bean name="car" class="Practical4.Car" autowire="byType" />
+
+</beans>

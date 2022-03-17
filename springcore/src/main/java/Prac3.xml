@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean class="Practical3.Engine" name="engine">
+		<property name="engineNo" value="1"></property>
+		<property name="engineName" value="2755 cc 2"></property>
+		<property name="engineType" value="2-GD FTV Engine"></property>
+	</bean>
+	
+	<bean class="Practical3.Car" name="car">
+		<property name="name" value="Innova"></property>
+		<property name="price" value="2078300"></property>
+		<property name="seats" value="7"></property>
+		<property name="color" value="Gray"></property>
+		<property name="fuelType" value="Diesel"></property>
+		<property name="Engine" ref="engine"></property>
+	</bean>
+
+</beans>

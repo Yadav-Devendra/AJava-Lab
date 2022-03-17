@@ -1,0 +1,113 @@
+ApplicationContext context = new ClassPathXmlApplicationContext("dbConfig.xml");
+		EmployeeDao dao = (EmployeeDao) context.getBean("edao");
+		// Insert Operation
+		dao.saveEmployee(new Employee("Rahul Patel", 50000));
+		dao.saveEmployee(new Employee("Milan Panchal", 60000));
+		dao.saveEmployee(new Employee("Ronak Karia", 40000));
+		dao.saveEmployee(new Employee("Yash Shelar", 70000));
+		dao.saveEmployee(new Employee("Mayur Patil", 80000));
+		
+		// Read Operation (R)
+		System.out.println("---Listing Employee Records After Insert-----");
+		List<Employee> emps = dao.listEmployees();
+		for (Employee record : emps) {
+			System.out.print("ID:" + record.getId());
+			System.out.print(", Name : " + record.getName());
+			System.out.println(", Salary : " + record.getSalary());
+		}
+		// Update Operation (U)
+		dao.updateEmployee(new Employee(4, "Omkar Singh", 160000));
+		// Read Operation (R)
+		System.out.println("----Listing Employee Records After Update--)");
+
+		List<Employee> emps1 = dao.listEmployees();
+		for (Employee record : emps1) {
+			System.out.print("ID:" + record.getId());
+			System.out.print(", Name : " + record.getName());
+			System.out.println(", Salary : " + record.getSalary());
+		}
+		// Delete Operation (D)
+		Employee e = new Employee();
+		e.setName("Rahul Patel");
+		dao.deleteEmployee(e);
+		// Read Operation (R)
+		System.out.println("---Listing Employee Records After Delete---");
+		List<Employee> emps2 = dao.listEmployees();
+		for (Employee record : emps2) {
+			System.out.print("ID:" + record.getId());
+			System.out.print(", Name : " + record.getName());
+			System.out.println(", Salary : " + record.getSalary());
+		}
+	}
+	
+	
+	
+	
+	
+	question 2
+	ApplicationContext context = new ClassPathXmlApplicationContext("dbConfig.xml");
+
+		EmployeeDao dao = (EmployeeDao) context.getBean("pstdao");
+
+		// Insert Operation
+		dao.saveEmployee(new Employee("Wilson Rao", 50000));
+		dao.saveEmployee(new Employee("Utkarsh Bafana", 60000));
+		dao.saveEmployee(new Employee("Abhishek Dere", 40000));
+		dao.saveEmployee(new Employee("Kalpesh Khandewal", 70000));
+		dao.saveEmployee(new Employee("Ujjal Kumar Ray", 80000));
+
+		// Read Operation (R)
+		System.out.println("Listing Employee Records After Insert");
+		List<Employee> emps = dao.listEmployees();
+		for (Employee record : emps) {
+			System.out.print("ID:" + record.getId());
+			System.out.print(", Name: " + record.getName());
+			System.out.println(", Salary:" + record.getSalary());
+		}
+
+		// Update Operation (U)
+		dao.updateEmployee(new Employee(3, "Abhishek Dere [Mazgaon]", 30000));
+
+		// Read Operation (R)
+		System.out.println("Listing Employee Records After Update");
+		List<Employee> emps1 = dao.listEmployees();
+
+		for (Employee record : emps1) {
+			System.out.print("ID:" + record.getId());
+			System.out.print(", Name:" + record.getName());
+			System.out.println(", Salary:" + record.getSalary());
+		}
+
+		// Delete Operation (D)
+		Employee e = new Employee();
+		e.setId(2);
+		dao.deleteEmployee(e);
+
+		// Read Operation (R)
+		System.out.println("Listing Employee Records After Delete");
+		List<Employee> emps2 = dao.listEmployees();
+		for (Employee record : emps2) {
+			System.out.print("ID:" + record.getId());
+			System.out.print(", Name:" + record.getName());
+			System.out.println(", Salary:" + record.getSalary());
+		}
+	}
+	
+
+	question 3
+	ApplicationContext context = new ClassPathXmlApplicationContext("dbConfig.xml");
+
+		EmployeeDao dao = (EmployeeDao) context.getBean("readdao");
+
+		// Read Operation (R) System.out.println("Listing Employee Records");
+
+		List<Employee> emps2 = dao.listEmployees();
+		for (Employee record : emps2) {
+			System.out.print("ID: " + record.getId());
+			System.out.print(", Name: " + record.getName());
+			System.out.println(", Salary:" + record.getSalary());
+		}
+	}
+	
+	question 4
+	

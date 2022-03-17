@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean class="Practical2.Engine" name="engine">
+		<constructor-arg value="1" type="int" />
+		<constructor-arg value="2755 cc 2" />
+		<constructor-arg value="2-GD FTV Engine" />
+	</bean>
+	
+	<bean class="Practical2.Car" name="car">
+		<constructor-arg value="Innova"></constructor-arg>
+		<constructor-arg value="2078300" type="int"></constructor-arg>
+		<constructor-arg value="7" type="int"></constructor-arg>
+		<constructor-arg value="Gray"></constructor-arg>
+		<constructor-arg value="Diesel"></constructor-arg>
+		<constructor-arg ref="engine" />
+	</bean>
+
+</beans>
